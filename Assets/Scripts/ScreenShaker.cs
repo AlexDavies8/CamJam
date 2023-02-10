@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenShaker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform _shakeContainer = null;
+    [SerializeField] private float _globalShakeMultiplier = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private float _trauma = 0f;
+    
+    
 }

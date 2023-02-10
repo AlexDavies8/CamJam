@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Optional;
+using UnityEngine;
 
 namespace MultiState
 {
@@ -9,9 +10,9 @@ namespace MultiState
         private const int MaxTransitionDepth = 100;
         
         private Option<IState> _currentState;
-        private Dictionary<IState, List<Transition>> _transitions = new Dictionary<IState, List<Transition>>();
+        private Dictionary<IState, List<Transition>> _transitions = new();
         private Option<List<Transition>> _currentTransitions = Option<List<Transition>>.None();
-        private List<Transition> _anyTransitions = new List<Transition>();
+        private List<Transition> _anyTransitions = new();
 
         public void Tick()
         {

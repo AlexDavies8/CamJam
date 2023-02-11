@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using MultiState;
 using UnityEngine;
 
-public class FallState : IState
+public class FallState : PlayerState
 {
-    public void Tick()
+    public FallState(PlayerControllerSettings settings, PlayerControllerState state) : base(settings, state) {}
+
+    public override void OnEnter()
     {
+        Settings.movementSmoothing *= Settings.fallMovementSmoothingMultiplier;
     }
 
-    public void OnEnter()
+    public override void OnExit()
     {
+        Settings.movementSmoothing /= Settings.fallMovementSmoothingMultiplier;
+        GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Settings.impactScreenShake);
     }
 
-    public void OnExit()
-    {
-    }
 }

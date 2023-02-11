@@ -45,35 +45,49 @@
     <Analyzer Include="E:\Programs\Unity Versions\2022.2.6f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player\JumpState.cs" />
      <Compile Include="Assets\Scripts\ScreenShaker.cs" />
      <Compile Include="Assets\Scripts\Player\IdleState.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\IState.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Lazy.cs" />
+     <Compile Include="Assets\Scripts\Packages\USync\Runtime\Sync.cs" />
+     <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Option.cs" />
+     <Compile Include="Assets\Scripts\Player\JumpState.cs" />
+     <Compile Include="Assets\Scripts\Player\MoveState.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerControllerSettings.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\States\SubMachineState.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\States\ActionState.cs" />
-     <Compile Include="Assets\Scripts\Packages\USync\Runtime\Sync.cs" />
      <Compile Include="Assets\Scripts\Player\FallState.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
      <Compile Include="Assets\Scripts\Player\ClimbState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\Player\WalkState.cs" />
-     <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Option.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Art\Placeholder" />
+     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\sheets" />
+     <None Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\changelog.txt" />
      <Folder Include="Assets\Scripts\Packages\Optional" />
      <Folder Include="Assets\Scripts\Packages\USync\Runtime" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Scripts\Packages\USync" />
+     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\gifs" />
+     <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Settings\Scenes" />
+     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\aseprite" />
      <Folder Include="Assets\Scripts\Packages\Multistate\States" />
      <Folder Include="Assets\Scripts\Packages\Multistate" />
+     <Folder Include="Assets\Art" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Scripts\Packages" />
+     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\misc" />
+     <Folder Include="Assets\ScriptableObjects" />
      <Folder Include="Assets\Scripts\Packages\Optional\Runtime" />
      <Folder Include="Assets\Scripts\Player" />
+     <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Programs\Unity Versions\2022.2.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -713,6 +727,9 @@
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.AI.Navigation">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
      </Reference>
@@ -865,6 +882,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>

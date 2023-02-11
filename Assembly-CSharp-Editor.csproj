@@ -736,6 +736,9 @@
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.AI.Navigation">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
      </Reference>
@@ -888,6 +891,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>D:\Sync\Unity\CamJam\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>

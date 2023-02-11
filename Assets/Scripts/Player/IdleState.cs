@@ -1,19 +1,6 @@
 using MultiState;
 
-public class IdleState : IState
+public class IdleState : PlayerState
 {
-    public void Tick()
-    {
-        
-    }
-
-    public void OnEnter()
-    {
-        
-    }
-
-    public void OnExit()
-    {
-        
-    }
+    public IdleState(PlayerControllerSettings settings, PlayerControllerState state) : base(settings, state) {}
 }

@@ -3,40 +3,35 @@ using System.Collections.Generic;
 using MultiState;
 using UnityEngine;
 
-public class JumpState : IState
+public class JumpState : PlayerState
 {
+    public JumpState(PlayerControllerSettings settings, PlayerControllerState state) : base(settings, state) {}
+    
     public float JumpTimer { get; set; }
-    
-    private PlayerMotor _motor;
-    
-    public float jumpVelocity;
-    public float jumpGravity;
-    public float maxJumpTime;
 
     private float _fallGravity;
-    
-    public JumpState(PlayerMotor motor)
-    {
-        _motor = motor;
-    }
 
-    public void OnEnter()
+    public override void OnEnter()
     {
-        JumpTimer = maxJumpTime;
-        _fallGravity = _motor.Gravity;
-        _motor.Gravity = jumpGravity;
+        JumpTimer = Settings.maxJumpTime;
+        _fallGravity = State.motor.Gravity;
+        State.motor.Gravity = Settings.jumpGravity;
 
-        _motor.Velocity = new Vector2(_motor.Velocity.x, jumpVelocity);
+        State.motor.Velocity = new Vector2(State.motor.Velocity.x, Settings.jumpVelocity);
+
+        Settings.movementSmoothing *= Settings.jumpMovementSmoothingMultiplier;
     }
     
-    public void Tick()
+    public override void Tick()
     {
         if (!Input.GetKey(KeyCode.Space)) JumpTimer = 0f;
         JumpTimer -= Time.deltaTime;
     }
 
-    public void OnExit()
+    public override void OnExit()
     {
-        _motor.Gravity = _fallGravity;
+        State.motor.Gravity = _fallGravity;
+
+        Settings.movementSmoothing /= Settings.jumpMovementSmoothingMultiplier;
     }
 }

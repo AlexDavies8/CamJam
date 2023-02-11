@@ -6,7 +6,9 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private float _maxVelocity = 30f;
+    
     public Vector2 Velocity { get; set; }
+    public float MaxVelocity => _maxVelocity;
     public bool OnGround { get; private set; }
     
     private Rigidbody2D _rb;
@@ -19,8 +21,9 @@ public class PlayerMotor : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateOnGround();
-        
+
         if (!OnGround) ApplyGravity();
+        else if (Velocity.y <= 0) Velocity = new Vector2(Velocity.x, -0.1f);
 
         Velocity = Vector2.ClampMagnitude(Velocity, _maxVelocity);
         _rb.velocity = Velocity;

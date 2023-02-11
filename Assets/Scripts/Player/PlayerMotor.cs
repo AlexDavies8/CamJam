@@ -29,7 +29,7 @@ public class PlayerMotor : MonoBehaviour
         _rb.velocity = Velocity;
     }
 
-    private void ApplyGravity()
+    public void ApplyGravity()
     {
         Velocity += Vector2.down * (Gravity * Time.fixedDeltaTime);
     }

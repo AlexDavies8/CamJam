@@ -22,6 +22,7 @@ MonoBehaviour:
   jumpMovementSmoothingMultiplier: 0.5
   impactScreenShake: 0.2
   fallMovementSmoothingMultiplier: 0.5
+  fireballPrefab: {fileID: 6687096589798989515, guid: b111f5d631b8daf4bada9b40757d8847, type: 3}
   idleAnimation: Idle
   walkAnimation: Walk
   jumpAnimation: Walk

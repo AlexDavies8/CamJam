@@ -9,14 +9,14 @@ public class FallState : PlayerState
 
     public override void OnEnter()
     {
-        Settings.movementSmoothing *= Settings.fallMovementSmoothingMultiplier;
+        State.movementSmoothing = Settings.movementSmoothing * Settings.fallMovementSmoothingMultiplier;
         
         State.animator.Play(Settings.fallAnimation, 0);
     }
 
     public override void OnExit()
     {
-        Settings.movementSmoothing /= Settings.fallMovementSmoothingMultiplier;
+        State.movementSmoothing = Settings.movementSmoothing;
         GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Settings.impactScreenShake);
     }
 

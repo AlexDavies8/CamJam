@@ -31,12 +31,19 @@ public class MoveState : PlayerState
 
         var groundedState = new SubMachineState(groundedStateMachine);
 
+        var attackState = new AttackState(Settings, State);
+
         _stateMachine = new StateMachine();
         _stateMachine.AddTransition(groundedState, jumpState,
             () => State.jumpBufferTimer >= 0 && State.coyoteTimer >= 0);
         _stateMachine.AddTransition(jumpState, fallState, () => jumpState.JumpTimer < 0 || State.motor.Velocity.y < 0f);
         _stateMachine.AddTransition(groundedState, fallState, () => State.coyoteTimer < 0 && !State.motor.OnGround);
         _stateMachine.AddTransition(fallState, groundedState, () => State.motor.OnGround);
+        
+        _stateMachine.AddTransition(groundedState, attackState, () => State.attackInput);
+        _stateMachine.AddTransition(jumpState, attackState, () => State.attackInput);
+        _stateMachine.AddTransition(fallState, attackState, () => State.attackInput);
+        _stateMachine.AddTransition(attackState, groundedState, () => attackState.Completed);
 
         _stateMachine.SetState(fallState);
     }
@@ -48,7 +55,6 @@ public class MoveState : PlayerState
 
     public override void OnExit()
     {
-        State.motor.Velocity = Vector2.zero;
         _stateMachine.Exit();
     }
 
@@ -57,7 +63,7 @@ public class MoveState : PlayerState
         _stateMachine.Tick();
 
         float target = State.horizontalInput * Settings.movementSpeed;
-        float smoothFac = Settings.movementSmoothing * Settings.movementSpeed * Time.deltaTime;
+        float smoothFac = State.movementSmoothing * Settings.movementSpeed * Time.deltaTime;
         _moveVelocity += Mathf.Clamp(target - _moveVelocity, -smoothFac, smoothFac);
 
         State.motor.Velocity = new Vector2(_moveVelocity, State.motor.Velocity.y);

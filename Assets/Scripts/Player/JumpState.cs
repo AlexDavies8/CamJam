@@ -18,8 +18,8 @@ public class JumpState : PlayerState
         State.motor.Gravity = Settings.jumpGravity;
 
         State.motor.Velocity = new Vector2(State.motor.Velocity.x, Settings.jumpVelocity);
-
-        Settings.movementSmoothing *= Settings.jumpMovementSmoothingMultiplier;
+        
+        State.movementSmoothing = Settings.movementSmoothing * Settings.jumpMovementSmoothingMultiplier;
         
         State.animator.Play(Settings.jumpAnimation, 0);
     }
@@ -34,6 +34,6 @@ public class JumpState : PlayerState
     {
         State.motor.Gravity = _fallGravity;
 
-        Settings.movementSmoothing /= Settings.jumpMovementSmoothingMultiplier;
+        State.movementSmoothing = Settings.movementSmoothing;
     }
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
         _state = new();
         _state.motor = GetComponent<PlayerMotor>();
         _state.animator = _animator;
+        _state.movementSmoothing = _settings.movementSmoothing;
         
         SetupStateMachine();
     }
@@ -31,10 +32,10 @@ public class PlayerController : MonoBehaviour
         _stateMachine = new StateMachine();
 
         var moveState = new MoveState(_settings, _state);
-        var attackState = new AttackState(_settings, _state);
+        //var attackState = new AttackState(_settings, _state);
         
-        _stateMachine.AddTransition(attackState, moveState, () => attackState.Completed);
-        _stateMachine.AddTransition(moveState, attackState, () => _state.attackInput);
+        //_stateMachine.AddTransition(attackState, moveState, () => attackState.Completed);
+       // _stateMachine.AddTransition(moveState, attackState, () => _state.attackInput);
 
         _stateMachine.SetState(moveState);
     }
@@ -70,4 +71,6 @@ public class PlayerControllerState
     
     public float coyoteTimer;
     public float jumpBufferTimer;
+
+    public float movementSmoothing;
 }

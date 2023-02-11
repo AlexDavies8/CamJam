@@ -1,4 +1,5 @@
 using MultiState;
+using UnityEngine;
 
 public class IdleState : PlayerState
 {
@@ -6,6 +7,6 @@ public class IdleState : PlayerState
 
     public override void OnEnter()
     {
-        State.animator.Play(Settings.idleAnimation);
+        State.animator.Play(Settings.idleAnimation, 0);
     }
 }

@@ -27,6 +27,7 @@ public class MoveState : PlayerState
         groundedStateMachine.AddTransition(idleState, walkState, () => State.horizontalInput != 0f);
         groundedStateMachine.AddTransition(walkState, idleState,
             () => State.horizontalInput == 0f && State.motor.Velocity.x == 0f);
+        groundedStateMachine.SetState(idleState);
 
         var groundedState = new SubMachineState(groundedStateMachine);
 
@@ -38,6 +39,17 @@ public class MoveState : PlayerState
         _stateMachine.AddTransition(fallState, groundedState, () => State.motor.OnGround);
 
         _stateMachine.SetState(fallState);
+    }
+
+    public override void OnEnter()
+    {
+        _stateMachine.Enter();
+    }
+
+    public override void OnExit()
+    {
+        State.motor.Velocity = Vector2.zero;
+        _stateMachine.Exit();
     }
 
     public override void Tick()

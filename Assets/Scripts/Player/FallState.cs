@@ -11,7 +11,7 @@ public class FallState : PlayerState
     {
         Settings.movementSmoothing *= Settings.fallMovementSmoothingMultiplier;
         
-        State.animator.Play(Settings.fallAnimation);
+        State.animator.Play(Settings.fallAnimation, 0);
     }
 
     public override void OnExit()

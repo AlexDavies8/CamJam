@@ -14,6 +14,16 @@ namespace MultiState
         private Option<List<Transition>> _currentTransitions = Option<List<Transition>>.None();
         private List<Transition> _anyTransitions = new();
 
+        public void Enter()
+        {
+            _currentState.Apply(x => x.OnEnter());
+        }
+        
+        public void Exit()
+        {
+            _currentState.Apply(x => x.OnExit());
+        }
+        
         public void Tick()
         {
             var transition = GetTransition();

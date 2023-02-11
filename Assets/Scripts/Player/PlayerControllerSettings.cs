@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Custom/PlayerControllerSettings")]
 public class PlayerControllerSettings : ScriptableObject
@@ -24,5 +25,10 @@ public class PlayerControllerSettings : ScriptableObject
     public string walkAnimation = "Walk";
     public string jumpAnimation = "Jump";
     public string fallAnimation = "Fall";
+    public string attackAnimation = "Attack";
     public float flipDirectionTime = 0.2f;
+
+    [FormerlySerializedAs("_minIntensity")] [Header("Fire Light")]
+    public float minIntensity = 0.8f;
+    [FormerlySerializedAs("_maxIntensity")] public float maxIntensity = 1.2f;
 }

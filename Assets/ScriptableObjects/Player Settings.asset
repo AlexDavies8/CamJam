@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Player Settings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerSettings
-  movementSpeed: 5
-  movementSmoothing: 5
+  movementSpeed: 6
+  movementSmoothing: 10
   jumpBufferTime: 0.1
   coyoteTime: 0.1
-  jumpVelocity: 15
-  jumpGravity: 35
+  jumpVelocity: 22
+  jumpGravity: 70
   maxJumpTime: 1
   jumpMovementSmoothingMultiplier: 0.5
   impactScreenShake: 0.2
   fallMovementSmoothingMultiplier: 0.5
   idleAnimation: Idle
   walkAnimation: Walk
-  jumpAnimation: Jump
-  fallAnimation: Fall
+  jumpAnimation: Walk
+  fallAnimation: Walk
+  attackAnimation: Attack
   flipDirectionTime: 0.2
+  minIntensity: 0.8
+  maxIntensity: 1.6

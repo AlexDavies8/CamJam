@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace MultiState
 {
     public class SubMachineState : IState
@@ -14,8 +16,14 @@ namespace MultiState
             _stateMachine.Tick();
         }
 
-        public void OnEnter() {}
-    
-        public void OnExit() {}
+        public void OnEnter()
+        {
+            _stateMachine.Enter();
+        }
+
+        public void OnExit()
+        {
+            _stateMachine.Exit();
+        }
     }
 }

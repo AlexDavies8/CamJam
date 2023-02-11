@@ -21,7 +21,7 @@ public class JumpState : PlayerState
 
         Settings.movementSmoothing *= Settings.jumpMovementSmoothingMultiplier;
         
-        State.animator.Play(Settings.jumpAnimation);
+        State.animator.Play(Settings.jumpAnimation, 0);
     }
     
     public override void Tick()

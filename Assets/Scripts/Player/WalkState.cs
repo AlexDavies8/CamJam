@@ -6,6 +6,6 @@ public class WalkState : PlayerState
 
     public override void OnEnter()
     {
-        State.animator.Play(Settings.walkAnimation);
+        State.animator.Play(Settings.walkAnimation, 0);
     }
 }

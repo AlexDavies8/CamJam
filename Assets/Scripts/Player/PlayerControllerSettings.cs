@@ -18,4 +18,11 @@ public class PlayerControllerSettings : ScriptableObject
     [Header("Falling")]
     public float impactScreenShake = 0.2f;
     public float fallMovementSmoothingMultiplier = 0.5f;
+
+    [Header("Animations")]
+    public string idleAnimation = "Idle";
+    public string walkAnimation = "Walk";
+    public string jumpAnimation = "Jump";
+    public string fallAnimation = "Fall";
+    public float flipDirectionTime = 0.2f;
 }

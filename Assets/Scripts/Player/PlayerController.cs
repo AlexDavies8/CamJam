@@ -1,4 +1,3 @@
-using System;
 using MultiState;
 using UnityEngine;
 using USync;
@@ -7,6 +6,8 @@ using USync;
 public class PlayerController : MonoBehaviour
 {
     public Sync<float> _lightIntensity = new(1f);
+    
+    [SerializeField] private Animator _animator;
     
     [SerializeField] private PlayerControllerSettings _settings;
     
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         _state = new();
         _state.motor = GetComponent<PlayerMotor>();
+        _state.animator = _animator;
         
         SetupStateMachine();
     }
@@ -53,6 +55,8 @@ public class PlayerController : MonoBehaviour
 public class PlayerControllerState
 {
     public PlayerMotor motor;
+    public Animator animator;
+    
     public float horizontalInput;
     
     public float coyoteTimer;

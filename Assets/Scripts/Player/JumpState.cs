@@ -20,6 +20,8 @@ public class JumpState : PlayerState
         State.motor.Velocity = new Vector2(State.motor.Velocity.x, Settings.jumpVelocity);
 
         Settings.movementSmoothing *= Settings.jumpMovementSmoothingMultiplier;
+        
+        State.animator.Play(Settings.jumpAnimation);
     }
     
     public override void Tick()

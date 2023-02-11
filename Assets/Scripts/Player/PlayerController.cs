@@ -1,10 +1,13 @@
 using System;
 using MultiState;
 using UnityEngine;
+using USync;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
+    public Sync<float> _lightIntensity = new(1f);
+    
     [SerializeField] private PlayerControllerSettings _settings;
     
     private PlayerControllerState _state;
@@ -42,6 +45,8 @@ public class PlayerController : MonoBehaviour
         
         _state.jumpBufferTimer -= Time.deltaTime;
         _state.coyoteTimer -= Time.deltaTime;
+
+        _lightIntensity.Value = Mathf.PerlinNoise1D(Time.time * 5f) * 0.5f + 0.5f;
     }
 }
 

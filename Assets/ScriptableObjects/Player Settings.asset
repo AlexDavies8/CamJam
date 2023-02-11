@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Player Settings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerSettings
   movementSpeed: 5
-  movementSmoothing: 10
+  movementSmoothing: 5
   jumpBufferTime: 0.1
   coyoteTime: 0.1
-  jumpVelocity: 8
-  jumpGravity: 25
-  maxJumpTime: 0.8
+  jumpVelocity: 15
+  jumpGravity: 35
+  maxJumpTime: 1
   jumpMovementSmoothingMultiplier: 0.5
-  impactScreenShake: 0.3
+  impactScreenShake: 0.2
   fallMovementSmoothingMultiplier: 0.5

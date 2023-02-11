@@ -64,30 +64,24 @@
      <Compile Include="Assets\Scripts\Player\ClimbState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\Player\WalkState.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
-     <Folder Include="Assets\Art\Placeholder" />
-     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\sheets" />
-     <None Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\changelog.txt" />
      <Folder Include="Assets\Scripts\Packages\Optional" />
      <Folder Include="Assets\Scripts\Packages\USync\Runtime" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Scripts\Packages\USync" />
-     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\gifs" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Settings\Scenes" />
-     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\aseprite" />
      <Folder Include="Assets\Scripts\Packages\Multistate\States" />
      <Folder Include="Assets\Scripts\Packages\Multistate" />
      <Folder Include="Assets\Art" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Scripts\Packages" />
-     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1\misc" />
      <Folder Include="Assets\ScriptableObjects" />
      <Folder Include="Assets\Scripts\Packages\Optional\Runtime" />
      <Folder Include="Assets\Scripts\Player" />
      <Folder Include="Assets\Prefabs" />
-     <Folder Include="Assets\Art\Placeholder\dinoCharactersVersion1.1" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Programs\Unity Versions\2022.2.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

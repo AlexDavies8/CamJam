@@ -22,3 +22,8 @@ MonoBehaviour:
   jumpMovementSmoothingMultiplier: 0.5
   impactScreenShake: 0.2
   fallMovementSmoothingMultiplier: 0.5
+  idleAnimation: Idle
+  walkAnimation: Walk
+  jumpAnimation: Jump
+  fallAnimation: Fall
+  flipDirectionTime: 0.2

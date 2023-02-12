@@ -13,6 +13,8 @@ public class JumpState : PlayerState
 
     public override void OnEnter()
     {
+        GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("PlayerJump");
+        
         JumpTimer = Settings.maxJumpTime;
         _fallGravity = State.motor.Gravity;
         State.motor.Gravity = Settings.jumpGravity;

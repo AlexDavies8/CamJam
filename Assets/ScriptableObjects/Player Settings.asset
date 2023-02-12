@@ -17,7 +17,7 @@ MonoBehaviour:
   movementSmoothing: 10
   jumpBufferTime: 0.1
   coyoteTime: 0.1
-  jumpVelocity: 22
+  jumpVelocity: 25
   jumpGravity: 70
   maxJumpTime: 1
   jumpMovementSmoothingMultiplier: 0.5

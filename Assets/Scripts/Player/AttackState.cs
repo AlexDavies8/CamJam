@@ -12,6 +12,7 @@ public class AttackState : PlayerState
     
     public override void OnEnter()
     {
+        GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("PlayerAttack");
         State.attackInput = false;
         State.animator.Play(Settings.attackAnimation);
         _timer = State.animator.GetAnimationClip(Settings.attackAnimation).length;

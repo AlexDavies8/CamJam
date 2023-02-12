@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("PlayerHurt");
         _health.Value -= amount;
         GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.5f);
     }

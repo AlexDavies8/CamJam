@@ -56,14 +56,17 @@
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Projectiles\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\Enemies\TimerState.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Lazy.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Packages\USync\Runtime\Sync.cs" />
      <Compile Include="Assets\Scripts\PowerCore.cs" />
      <Compile Include="Assets\Scripts\UpdateSlider.cs" />
      <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Option.cs" />
      <Compile Include="Assets\Scripts\Enemies\Boss.cs" />
      <Compile Include="Assets\Scripts\Player\AttackState.cs" />
+     <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\Player\JumpState.cs" />
      <Compile Include="Assets\Scripts\AnimateOnPowerCore.cs" />
      <Compile Include="Assets\Scripts\Enemies\AnimationState.cs" />
@@ -131,6 +134,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Animation" />
      <Folder Include="Assets\ScriptableObjects" />
+     <Folder Include="Assets\Audio\SFX" />
      <Folder Include="Assets\Animation\Soldier" />
      <Folder Include="Assets\Art\Sprites\Tileset" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />

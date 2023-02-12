@@ -18,7 +18,6 @@ public class AnimationState : IState
     
     public void OnEnter()
     {
-        Debug.Log(_animationName);
         _animator.Play(_animationName, 0);
         _timer = _animator.GetAnimationClip(_animationName)?.length ?? 0f;
     }

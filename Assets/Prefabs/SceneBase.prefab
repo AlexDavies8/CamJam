@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMotor: {fileID: 2462923525036977149}
   _offset: 2
-  _smoothFactor: 5
+  _smoothFactor: 10
 --- !u!1001 &1167593159344431290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -508,19 +508,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8297370160571951299, guid: 4ed77e8a345f4ae4f829b6a5e21e1e69, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.275
+      value: 0.56398106
       objectReference: {fileID: 0}
     - target: {fileID: 8297370160571951299, guid: 4ed77e8a345f4ae4f829b6a5e21e1e69, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.1
+      value: 0.124078624
       objectReference: {fileID: 0}
     - target: {fileID: 8297370160571951299, guid: 4ed77e8a345f4ae4f829b6a5e21e1e69, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.45000002
+      value: 0.19498985
       objectReference: {fileID: 0}
     - target: {fileID: 8297370160571951299, guid: 4ed77e8a345f4ae4f829b6a5e21e1e69, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.8
+      value: 0.35380834
       objectReference: {fileID: 0}
     - target: {fileID: 8297370161270398149, guid: 4ed77e8a345f4ae4f829b6a5e21e1e69, type: 3}
       propertyPath: m_Name

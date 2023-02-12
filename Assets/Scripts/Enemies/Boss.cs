@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using MultiState;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Boss : MonoBehaviour
 {
+    public UnityEvent OnDie;
     public List<PowerCore> cores = new();
     [SerializeField] private Animator _animator;
 
@@ -40,6 +42,9 @@ public class Boss : MonoBehaviour
         _stateMachine.AddTransition(drillSweep, idle, () => drillSweep.Completed);
         
         _stateMachine.AddAnyTransition(death, () => cores.All(x => x.Destroyed));
+        
+        var dieEvent = new ActionState().OnEnter(() => OnDie.Invoke());
+        _stateMachine.AddTransition(death, dieEvent, () => death.Completed);
         
         _stateMachine.SetState(idle);
     }

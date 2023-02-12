@@ -1,5 +1,6 @@
 using MultiState;
 using UnityEngine;
+using UnityEngine.Events;
 using USync;
 
 [RequireComponent(typeof(PlayerMotor))]
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _animator;
     
     [SerializeField] private PlayerControllerSettings _settings;
+
+    public UnityEvent OnDie;
     
     [Header("Synced Properties")]
     public Sync<float> _lightIntensity = new(1f);
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) _state.jumpBufferTimer = _settings.jumpBufferTime;
         if (_state.motor.OnGround) _state.coyoteTimer = _settings.coyoteTime;
 
-        if (Input.GetKeyDown(KeyCode.Z)) _state.attackInput = true;
+        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Z)) _state.attackInput = true;
         
         _state.horizontalInput = Input.GetAxisRaw("Horizontal");
     }
@@ -65,8 +68,9 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float amount)
     {
         GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("PlayerHurt");
-        _health.Value -= amount;
+        _health.Value = Mathf.Clamp(_health.Value - amount, 0, _settings.maxHealth);
         GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.5f);
+        if (_health.Value <= 0) OnDie.Invoke();
     }
 }
 

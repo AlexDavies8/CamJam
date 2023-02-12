@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("PlayerHurt");
         _health.Value = Mathf.Clamp(_health.Value - amount, 0, _settings.maxHealth);
-        GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.5f);
+        if (amount > 0) GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.5f);
         if (_health.Value <= 0) OnDie.Invoke();
     }
 }

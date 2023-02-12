@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Player Settings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerSettings
-  maxHealth: 100
+  maxHealth: 300
   movementSpeed: 5
   movementSmoothing: 10
   jumpBufferTime: 0.1

@@ -27,6 +27,7 @@ public class Soldier : MonoBehaviour
             .OnEnter(() => PlayAnimation(_aimAnimation))
             .OnTick(AimGun);
         var fireState = new ActionState()
+            .OnEnter(() => GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("SoldierAttack"))
             .OnEnter(() => PlayAnimation(_fireAnimation));
         
         _stateMachine.AddTransition(aimState, idleState, () => GetPlayerDistance() > _aimDistance);
@@ -74,6 +75,6 @@ public class Soldier : MonoBehaviour
 
     private float GetPlayerDistance()
     {
-        return Mathf.Abs(GameManager.Instance.GetGlobalComponent<PlayerController>().transform.position.y - transform.position.y);
+        return Vector2.Distance(GameManager.Instance.GetGlobalComponent<PlayerController>().transform.position, transform.position);
     }
 }

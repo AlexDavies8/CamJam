@@ -182,9 +182,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219185559
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e6dbe89d529024a409c1ca949eb16479, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56136710b924bea41a6476a115b347eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9183484947779887586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.364, y: -0.707, z: 0}
+  m_LocalPosition: {x: -0.005, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,9 +267,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219185559
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 860f2458ee87d624e81b04b0fb9d842f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46f810f8ccbfa1f4e9c783aa111665d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 1661465775055122283}
   - component: {fileID: 5737927231543299752}
   m_Layer: 0
-  m_Name: flamer_guy
+  m_Name: FemaleSoldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219185559
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -5
   m_Positions:
   - {x: 0, y: 0, z: 0}

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("Synced Properties")]
     public Sync<float> _lightIntensity = new(1f);
+    public Sync<float> _health = new(1f);
 
     private PlayerControllerState _state;
 
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _health.Value = _settings.maxHealth;
+        
         _state = new();
         _state.motor = GetComponent<PlayerMotor>();
         _state.animator = _animator;
@@ -61,8 +64,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        _state.health -= amount;
-        GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.8f);
+        _health.Value -= amount;
+        GameManager.Instance.GetGlobalComponent<ScreenShaker>().AddTrauma(Mathf.Pow(amount / _settings.maxHealth, 0.2f) * 0.5f);
     }
 }
 
@@ -70,8 +73,6 @@ public class PlayerControllerState
 {
     public PlayerMotor motor;
     public Animator animator;
-
-    public float health;
     
     public float horizontalInput;
     public bool attackInput;

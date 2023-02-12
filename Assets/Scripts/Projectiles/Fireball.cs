@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
+    public float damage = 10f;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _initialVelocity = 15f;
     [SerializeField] private float _destroyDelay = 5f;

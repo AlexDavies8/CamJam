@@ -4,6 +4,8 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(menuName = "Custom/PlayerControllerSettings")]
 public class PlayerControllerSettings : ScriptableObject
 {
+    [Header("Health")] public float maxHealth = 100f;
+    
     [Header("Movement")]
     public float movementSpeed = 5f;
     public float movementSmoothing = 2f;

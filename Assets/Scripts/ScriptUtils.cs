@@ -16,4 +16,10 @@ public static class ScriptUtils
 
         return null;
     }
+
+    public static float LookDirection(this Vector2 direction)
+    {
+        direction.Normalize();
+        return Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg - 90f;
+    }
 }

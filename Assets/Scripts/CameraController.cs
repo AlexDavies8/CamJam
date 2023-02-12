@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_playerMotor.OnGround && _playerMotor.Velocity.y <= 0f && _playerMotor.transform.position.y > _targetPosition)
+        if (_playerMotor.OnGround && _playerMotor.Velocity.y <= 0f)
             _targetPosition = _playerMotor.transform.position.y;
         float newY = Mathf.MoveTowards(transform.position.y, _targetPosition + _offset,
             _smoothFactor * Time.deltaTime);

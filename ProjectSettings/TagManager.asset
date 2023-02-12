@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 219185559
+    locked: 0
+  - name: Glowing
+    uniqueID: 2915962713
     locked: 0
   - name: Foreground
     uniqueID: 1071815779

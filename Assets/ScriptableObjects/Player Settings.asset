@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Player Settings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControllerSettings
+  maxHealth: 100
   movementSpeed: 6
   movementSmoothing: 10
   jumpBufferTime: 0.1
@@ -22,12 +23,11 @@ MonoBehaviour:
   jumpMovementSmoothingMultiplier: 0.5
   impactScreenShake: 0.2
   fallMovementSmoothingMultiplier: 0.5
-  fireballPrefab: {fileID: 6687096589798989515, guid: b111f5d631b8daf4bada9b40757d8847, type: 3}
   idleAnimation: Idle
   walkAnimation: Walk
   jumpAnimation: Walk
   fallAnimation: Walk
   attackAnimation: Attack
   flipDirectionTime: 0.2
-  minIntensity: 0.8
-  maxIntensity: 1.6
+  minIntensity: 1.2
+  maxIntensity: 2

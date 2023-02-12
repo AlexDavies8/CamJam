@@ -47,11 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ScreenShaker.cs" />
      <Compile Include="Assets\Scripts\ScriptUtils.cs" />
+     <Compile Include="Assets\Scripts\ParallaxObject.cs" />
      <Compile Include="Assets\Scripts\Player\IdleState.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\IState.cs" />
      <Compile Include="Assets\Scripts\Packages\Multistate\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Lazy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\Packages\USync\Runtime\Sync.cs" />
      <Compile Include="Assets\Scripts\Packages\Optional\Runtime\Option.cs" />
      <Compile Include="Assets\Scripts\Player\AttackState.cs" />
@@ -65,6 +68,7 @@
      <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
      <Compile Include="Assets\Scripts\Player\FallState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\LaserSight.cs" />
      <Compile Include="Assets\Scripts\Player\ClimbState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\Player\WalkState.cs" />
@@ -80,6 +84,7 @@
      <Folder Include="Assets\Scripts\Projectiles" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Art\Sprites" />
+     <Folder Include="Assets\Scripts\Enemies" />
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\Scripts\Packages\Multistate\States" />
      <Folder Include="Assets\Scripts\Packages\Multistate" />
@@ -88,6 +93,7 @@
      <Folder Include="Assets\Scripts\Packages" />
      <Folder Include="Assets\Animation" />
      <Folder Include="Assets\ScriptableObjects" />
+     <Folder Include="Assets\Animation\Soldier" />
      <Folder Include="Assets\Art\Sprites\Tileset" />
      <Folder Include="Assets\Scripts\Packages\Optional\Runtime" />
      <Folder Include="Assets\Scripts\Player" />

@@ -15,6 +15,7 @@ public class PowerCore : MonoBehaviour
             if (_health <= 0)
             {
                 _animator.Play("Destroy", 0);
+                GameManager.Instance.GetGlobalComponent<AudioManager>().PlaySound("Explosion", 0.6f);
                 Destroyed = true;
             }
             else

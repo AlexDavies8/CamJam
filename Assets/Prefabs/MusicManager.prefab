@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2295240627940817545
 AudioSource:
@@ -43,9 +43,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a277ac1c5c92e624783e9def1e402e20, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.533
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - id: Level1
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 0463b12358d65d34c9f4ba3f50daeaaa, type: 3}
   - id: Boss1
     clip: {fileID: 8300000, guid: a277ac1c5c92e624783e9def1e402e20, type: 3}
   - id: Level2
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 879a7ee752b1d6c4cab5848996590b13, type: 3}
   - id: Boss2
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9379e91cd2de4fd4f82b4e4bff1274d5, type: 3}

@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4280283331043063359
 AudioSource:
@@ -143,22 +143,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - id: PlayerHurt
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1855b8850e85a854e9d5a296b438a753, type: 3}
   - id: PlayerDeath
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1d190913476188447bfdd9d75cb75e90, type: 3}
   - id: PlayerJump
     clip: {fileID: 0}
   - id: PlayerAttack
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 44aab1f974810ea46a633717d517a102, type: 3}
   - id: SoldierDeath
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: ee77517b54127b84099aebabe2549b61, type: 3}
   - id: EnemyHurt
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: ee77517b54127b84099aebabe2549b61, type: 3}
   - id: Explosion
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 13c836676dbd2c24898b57fd08567aa3, type: 3}
   - id: BossDeath
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 13c836676dbd2c24898b57fd08567aa3, type: 3}
   - id: LaserAttack
     clip: {fileID: 0}
+  - id: SoldierAttack
+    clip: {fileID: 8300000, guid: d1267c0787a688e48932fad5136aebe3, type: 3}
   - id: DrillAttack
     clip: {fileID: 0}

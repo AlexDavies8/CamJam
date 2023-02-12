@@ -12,6 +12,7 @@ public class UnityEventOnTrigger : MonoBehaviour
         if (player != null)
         {
             Event.Invoke();
+            Destroy(gameObject);
         }
     }
 }

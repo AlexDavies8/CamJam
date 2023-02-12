@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 8496938930390701179}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8496938929594448380
 SpriteRenderer:
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219185559
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9c9a7f7c1ebdaa44aa989870350accb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -274,7 +274,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -380,7 +380,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.9102263, b: 0.5896226, a: 1}
+      minColor: {r: 0.9339623, g: 0.6158087, b: 0.2863564, a: 0.57254905}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -1721,7 +1721,12 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 37b848217fd26394f9a8d9f2195f9eb0, type: 3}
+    - sprite: {fileID: -681636582, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
+    - sprite: {fileID: -971207838, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
+    - sprite: {fileID: -259606974, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
+    - sprite: {fileID: 440232328, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
+    - sprite: {fileID: -205993633, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
+    - sprite: {fileID: 491239669, guid: 7bd8458db3aec694385b2f247e63b289, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -5030,7 +5035,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1071815779
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
